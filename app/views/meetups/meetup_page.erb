@@ -1,0 +1,18 @@
+<h1><%= @meetup.name %></h1>
+
+<h3>Date: <%= @meetup.date %></h3>
+<h3>Time: <%= @meetup.time %></h3>
+<h3>Location: <%= @meetup.location %></h3>
+<h3>Attendees: </h3>
+<% if @names.empty? == false %>
+  <% @names.each do |user| %>
+    <%= user.username %>
+  <% end %>
+<% else %>
+  <%= 'No one yet!' %>
+<% end %>
+<br>
+
+<form action="" method="post">
+  <input type="submit" value="Join!">
+</form>
